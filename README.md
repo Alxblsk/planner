@@ -7,7 +7,7 @@ The MVP consist of:
 - Simplified UI
 
 Technology stack:
-- [ ] Typescript 4
-- [ ] Bootstrap 5
-- [ ] Jest
-- [ ] Parcel
+- Typescript 4
+- Bootstrap 5
+- Jest
+- Parcel
