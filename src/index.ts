@@ -1,3 +1,3 @@
 function init() {
-    console.log('Hello Planner!');
+  console.log('Hello Planner!');
 }
