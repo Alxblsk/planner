@@ -4,15 +4,19 @@
   "description": "The Planner",
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "build": "parcel build ./src/index.html",
+    "dev": "sh ./scripts/start.sh"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Alxblsk/planner.git"
   },
-  "keywords": ["todo", "planner"],
+  "keywords": [
+    "todo",
+    "planner"
+  ],
   "author": "Aliaksei Belski",
   "license": "ISC",
   "bugs": {
@@ -22,6 +26,7 @@
   "devDependencies": {
     "@types/jest": "^26.0.19",
     "jest": "^26.6.3",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^2.2.1",
     "ts-jest": "^26.4.4",
     "tslint": "^6.1.3",

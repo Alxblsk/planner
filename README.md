@@ -10,4 +10,4 @@ Technology stack:
 - [ ] Typescript 4
 - [ ] Bootstrap 5
 - [ ] Jest
-- [ ] Parcel (?)
+- [ ] Parcel
