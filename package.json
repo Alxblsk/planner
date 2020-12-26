@@ -1,8 +1,7 @@
 {
   "name": "planner",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "The Planner",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
@@ -13,8 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/Alxblsk/planner.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["todo", "planner"],
+  "author": "Aliaksei Belski",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Alxblsk/planner/issues"
