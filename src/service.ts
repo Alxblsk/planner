@@ -11,29 +11,39 @@ interface ITodo {
 }
 
 interface IToDoService {
-    activate(title: string): ITodo,
-    activate(todo: ITodo): ITodo,
+    create(title: string): ITodo,
+    create(todo: ITodo): ITodo,
     complete(todo: ITodo): ITodo,
     archive(todo: ITodo): ITodo
 }
 
 export class TodoService implements IToDoService {
-    constructor(public list: ITodo[]) { }
+    id = 0;
 
-    activate(item: ITodo): ITodo;
-    activate(item: string): ITodo;
-    activate(item: any): ITodo {
-        const newTodo: ITodo = {
-            id: 1,
-            title: '',
-            status: TodoStatus.ACTIVE
+    generateId(): number {
+        return ++this.id;
+    }
+
+    constructor(private list: ITodo[]) { }
+
+    get all(): ITodo[] {
+        return this.list;
+    }
+
+    create(item: ITodo): ITodo;
+    create(item: string): ITodo;
+    create(item: any): ITodo {
+        const status = TodoStatus.ACTIVE;
+        let newItem;
+
+        if (typeof item === 'string') {
+            newItem = { status, title: item, id: this.generateId() };
+        } else {
+            newItem = { ...item, status };
         }
 
-        newTodo.title = typeof item === 'string' ? item : item.title;
-
-        this.list.push(newTodo);
-
-        return newTodo;
+        this.list.push(newItem);
+        return newItem;
     }
 
     complete(item: ITodo): ITodo {
