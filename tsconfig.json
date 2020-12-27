@@ -6,7 +6,8 @@
         "declaration": true,
         "strict": true,
         "sourceMap": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "jsx": "react"
     },
     "include": ["./src/**/*"],
     "exclude": ["node_modules", "**/*.spec.ts"]

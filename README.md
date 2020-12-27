@@ -9,5 +9,6 @@ The MVP consist of:
 Technology stack:
 - Typescript 4
 - Bootstrap 5
+- React 17
 - Jest
 - Parcel
