@@ -4,6 +4,9 @@
   },
   "testRegex": ".*spec\\.ts$",
   "moduleFileExtensions": ["js", "ts", "json"],
+  "moduleNameMapper": {
+    "\\.(css|scss)$": "<rootDir>/src/__mocks__/styleMock.js"
+  },
   "globals": {
     "ts-jest": {
       "diagnostics": {
